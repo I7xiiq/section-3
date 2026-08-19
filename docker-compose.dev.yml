@@ -23,6 +23,9 @@ services:
       # Map port 4000 on your local machine to port 4000 inside the container
       - "4000:4000"
     
+    environment:
+      - NODE_ENV=DEVELOPMENT
+
     # Pass environment variables to the container using an external file
     env_file:
       # The path to the file containing your environment variables
