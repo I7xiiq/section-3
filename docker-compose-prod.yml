@@ -6,6 +6,9 @@ services:
   
   # The name of our specific service (used for networking between containers)
   node-app:
+    build: 
+      context: .
+      target: PRODUCTION
     
     environment:
       - NODE_ENV=PRODUCTION
