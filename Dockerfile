@@ -24,5 +24,5 @@ EXPOSE 4000
 # Documents that the container listens on port 4000 (doesn't actually publish it;
 # you still need -p when running the container)
 
-CMD ["npm", "start"]
+CMD ["npm", "run" ,"start-dev"]
 # Sets the default command to run when the container starts
