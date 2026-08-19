@@ -81,4 +81,22 @@ to run app with hot reload read only:
 
 
 
+
+
+
+to run app with docker-compose
+   docker compose up -d
+
+
+
+
+
+
+to see Environment Variables:
+ 1- docker exec -it express-node-app-container bash
+ 2- printenv
+
+
+
+
  
