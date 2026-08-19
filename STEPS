@@ -99,4 +99,16 @@ to see Environment Variables:
 
 
 
+
+
+
+
+
+
+to run dev compose:
+ docker compose -f docker-compose.dev.yml up -d
+
+
+
+
  
