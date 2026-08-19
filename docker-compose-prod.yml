@@ -1,0 +1,29 @@
+# Specify the version of docker-compose syntax being used
+version: "3"
+
+# Define the containers (services) that make up your application
+services:
+  
+  # The name of our specific service (used for networking between containers)
+  node-app:
+    
+    # Explicitly set a custom name for the container instead of a random one
+    container_name: express-node-app-container
+    
+    # Build the Docker image using the Dockerfile located in the current directory (.)
+    build: .
+    
+    # Map folders from your host machine to the container (enables Hot Reloading)
+    volumes:
+      # Map the local 'src' folder to the container's '/app/src' folder in Read-Only (ro) mode
+      - ./src:/app/src:ro
+    
+    # Define port forwarding to access the app from outside the container
+    ports:
+      # Map port 4000 on your local machine to port 4000 inside the container
+      - "4000:4000"
+    
+    # Pass environment variables to the container using an external file
+    env_file:
+      # The path to the file containing your environment variables
+      - ./.env
