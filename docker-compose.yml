@@ -11,7 +11,6 @@ services:
     container_name: express-node-app-container
     
     # Build the Docker image using the Dockerfile located in the current directory (.)
-    build: .
     
     # Define port forwarding to access the app from outside the container
     ports:
