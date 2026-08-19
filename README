@@ -1,0 +1,23 @@
+# Docker Course
+
+A practical, hands-on course that teaches Docker step by step through real examples.
+
+## Section 3: Hot Reload & Docker Compose
+
+In this section, you'll learn how to set up a smooth development workflow inside Docker, and how to manage multi-container applications with a single configuration file.
+
+### Topics covered
+
+**Hot Reload**
+Normally, when you make a code change while your app is running inside a container, you'd have to manually stop and rebuild the container to see that change — which slows down development a lot. Hot reload solves this by watching your source files and automatically restarting (or refreshing) the app the moment you save a change, without you touching the terminal. Inside Docker, this is achieved by mounting your local code as a **volume** into the container, so the container always sees your latest files, combined with a tool like `nodemon` that watches for changes and restarts the app automatically.
+
+**Docker Compose**
+Real applications are rarely just one container — you might have a backend, a database, and a frontend all running together, each needing its own configuration, ports, and environment variables. Running and connecting all of these manually with individual `docker run` commands quickly becomes messy. Docker Compose solves this by letting you define **all your services in a single YAML file** (`docker-compose.yml`), describing how each container should be built, which ports to expose, which volumes to mount, and how the services connect to each other. Instead of multiple manual commands, you just run:
+```bash
+docker compose up
+```
+and Compose builds, starts, and networks everything together automatically.
+
+### What you'll build in this section
+- A Dockerized app with hot reload enabled for local development
+- A `docker-compose.yml` file to manage the app (and any additional services) as a single unit
