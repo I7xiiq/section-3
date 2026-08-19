@@ -1,0 +1,61 @@
+install node:20-alpine
+install vs-code
+install docker
+
+
+
+
+in terminal 
+ npm init
+ npm i  express
+ npm i nodemon --save-dev
+
+
+
+
+
+ to make image:
+   docker build -t image name .
+ to see image:
+   docker image ls
+
+
+
+
+
+to run container:
+   docker run --name containername -d -p 4000:4000 imagename
+
+
+
+
+link localhost:
+   http://localhost:4000/
+
+
+
+
+to stop container:
+   docker stop --name containername imagename
+
+
+
+
+
+to see container:
+   docker ps
+
+
+
+
+
+to remove container:
+   docker rm express-node-app-container -f
+
+
+
+
+
+
+ to open terminal in container:
+  docker exec -it containername bash
