@@ -59,3 +59,20 @@ to remove container:
 
  to open terminal in container:
   docker exec -it containername bash
+
+
+
+
+
+
+
+to run app with hot reload:
+  docker run --name express-node-app-container -v "${PWD}:/app" -d -p 4000:4000 express-node-app
+
+
+
+
+
+
+
+ 
