@@ -6,22 +6,6 @@ services:
   
   # The name of our specific service (used for networking between containers)
   node-app:
-    
-    # Explicitly set a custom name for the container instead of a random one
-    container_name: express-node-app-container
-    
-    # Build the Docker image using the Dockerfile located in the current directory (.)
-    build: .
-    
-    # Define port forwarding to access the app from outside the container
-    ports:
-      # Map port 4000 on your local machine to port 4000 inside the container
-      - "4000:4000"
-    
+  
     environment:
       - NODE_ENV=PRODUCTION
-
-    # Pass environment variables to the container using an external file
-    env_file:
-      # The path to the file containing your environment variables
-      - ./.env
