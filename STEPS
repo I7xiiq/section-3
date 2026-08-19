@@ -74,5 +74,11 @@ to run app with hot reload:
 
 
 
+to run app with hot reload read only:
+   docker run --name express-node-app-container -v ${PWD}:/app:ro -d -p 4000:4000 express-node-app
+
+
+
+
 
  
