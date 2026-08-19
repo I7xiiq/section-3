@@ -1,4 +1,6 @@
-FROM node:20-alpine
+FROM node:20-alpine as base
+
+FROM base as DEVELOPMENT
 # Node version / baseimage
 
 WORKDIR /app
@@ -26,3 +28,21 @@ EXPOSE 4000
 
 CMD ["npm", "run" ,"start-dev"]
 # Sets the default command to run when the container starts
+
+
+
+
+
+FROM base as PRODUCTION
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN npm install --only=production
+
+COPY . .
+
+EXPOSE 4000
+
+CMD ["npm", "start"]
